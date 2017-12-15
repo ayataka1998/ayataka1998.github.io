@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>git</title>
+</head>
+<body>
+    <form>
+                <select name="drop" id="drop">
+            <option value="maguro.html"/>マグロ</option>
+            <option value="sarmon.html"/>サーモン</option>
+            <option value="egg.html"/>たまご</option>
+            <option value="git.html"/>git</option>
+        </select>
+    </form>
+    
+    <script>
+            document.addEventListener('DOMContentLoaded',function(){
+                document.getElementById('drop').addEventListener('change',function(){
+                    location.href=this.value;
+                },false);
+            },false);
+            </script>
+           <center> <img src="001.jpg"></center>
+            <center><h1>githubの使いかた</h1></center>
+            <center><p>リポジトリを作成する<br>ファイルの作成、編集を行う<br>
+                ファイルの作成/変更/削除をgitのインデックスに追加する（git add）<br>
+                変更結果をローカルリポジトリにコミットする（git commit）<br>          
+                ローカルリポジトリをプッシュしてリモートリポジトリへ反映させる（git push）</p></center>
+            <center><h1>githubの作り方</h1></center>
+            <center><p>Repository name:必須。リポジトリ名を入力<br>
+                Description:任意。リポジトリの説明を入力<br>
+                Public/Private:公開したくない場合はPrivate(有償契約の場合)<br>
+                Initialize this repository with a README:READMEを作成するか否か。後から作れるため未チェック。<br>
+                Add .gitignore:git で無視するファイルを指定するファイル。後から作れるためNone<br>
+                Add a license:ライセンス設定。後から作れるためNone</p></center>
+                <center><h1>github更新</h1></center>
+                <center><p>masterを更新したい時<br>追加→確認→コミット→プッシュ。<br>git status<br>git diff<br>
+                    git add .<br>git status<br>git commit -m "コメント"<br>git push origin master<br><br>
+                    ブランチ切って更新→マージしたい時<br>ブランチ=「枝分かれ」の意味。複数のバージョンを同時に
+                    開発したいときに使うと便利らしい。<br># ブランチ作成<br>git branch ブランチ名<br># ブランチ
+                    確認 （頭に * のついているのが現在のブランチ）<br>git branch<br># ブランチ切り替え（移動）<br>
+                    git checkout ブランチ名<br># 変更（ブランチ先にコミットしたりする）<br>git status<br>
+                    git diff<br>git add .<br>git status<br>git commit -m "コメント"<br># リモートにPush<br>
+                    git push origin ブランチ名<br><br>##### 区切りが良くなって、マージしたくなった時 #####<br>
+                    # マージ先(master)に移動<br>git checkout master<br># さっき作成したブランチをマージ先にマージ<br>
+                    git merge ブランチ名<br># ログ確認（さっきのブランチの変更内容がマージ先に反映されている
+                    か確認）<br>git log<br># Pushする<br>git push origin master<br># マージ後に削除<br>
+                    git branch -d ブランチ名<br>git push origin :ブランチ名</p></center>
+</body>
+</html>
