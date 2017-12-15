@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>たまご</title>
+</head>
+<body>
+    <form>
+        <select name="drop" id="drop">
+            <option value="egg.html"/>たまご</option>
+            <option value="maguro.html"/>マグロ</option>
+            <option value="sarmon.html"/>サーモン</option>
+            
+        </select>
+    </form>
+    <p>たまご♪</p>
+    <img src="玉子.jpg" alt="たまご">
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+        document.getElementById('drop').addEventListener('change',function(){
+            location.href=this.value;
+        },false);
+    },false);
+    </script>
+</body>
+</html>
