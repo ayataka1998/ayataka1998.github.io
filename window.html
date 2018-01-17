@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <form>
+                <select name="drop" id="drop">
+                     <option value="">選択してください</option>
+                     <option value="maguro.html">マグロ</option>
+                     <option value="sarmon.html">サーモン</option>
+                     <option value="egg.html">たまご</option>
+                     <option value="git.html">git</option>
+                     <option value="favorite.html">お気に入り画像集</option>
+                     <option value="useragent.html">ブラウザの判定</option>
+                     <option value="window.html">windowメソッドについて</option>
+                     <option value="console.html">consoleオブジェクトについて</option>
+                     <option value="timer.html">タイマー</option>
+                </select>
+           </form>
+
+    <h1>Windowメソッドの使い方</h1>
+    <h2>Window.open</h2>
+    <p>構文　var win = window.open(url, name [, features]);</p>
+    <p>open() メソッドは、新しい副ブラウザウィンドウを生成します。それは、ファイルメニューから新しいウィンドウを
+        選ぶのに似ています。引数 url は、新しいウィンドウにおいて<br>フェッチしロードする URL を指定します。url が空
+        文字列の場合は、メインウィンドウのデフォルトツールバーを持った新しい空白の空のウィンドウが生成されます。リモート URL 
+        は、すぐにはロードされないことに注意。window.open()が戻り値を返すとき、ウィンドウは、常に about:blank 
+        を含んでいます。URL が実際にフェッチされるまでには猶予期間があり、<br>現在のスクリプトブロックが実行を終えた後に開始されます。
+        ウィンドウの生成と参照されるリソースの読み込みは、非同期に行われます。
+    </p>
+    <h2>Window.close</h2>
+    <p>構文　window.close();</p>
+    <p>Window.close() メソッドは、現在のウィンドウ、またはそのページ上で呼び出されたウィンドウを閉じます。
+        このメソッドが許可されるのは、window.open() メソッドを用いた<br>スクリプトにより開かれたウィンドウに対する
+        呼び出しのみです。ウィンドウがスクリプトにより開かれたものでない場合、次のようなエラーがコンソールに表示され
+        ます<br> スクリプトはスクリプトによって開かれたウィンドウ以外を閉じることができません。
+    </p>
+    <h2>Window.focus</h2>
+    <p>構文　window.focus()</p>
+    <p>ウィンドウを最前面にする</p>
+    <script>document.addEventListener('DOMContentLoaded',function(){
+            document.getElementById('drop').addEventListener('change',function(){
+                location.href = this.value;
+            });
+        });
+    </script>
+</body>
+</html>

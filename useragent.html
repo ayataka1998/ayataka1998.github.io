@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>ブラウザ判定</title>
+     <style>
+     </style>
+</head>
+<body>
+     <form>
+          <select name="drop" id="drop">
+               <option value="">選択してください</option>
+               <option value="maguro.html">マグロ</option>
+               <option value="sarmon.html">サーモン</option>
+               <option value="egg.html">たまご</option>
+               <option value="git.html">git</option>
+               <option value="favorite.html">お気に入り画像集</option>
+               <option value="useragent.html">ブラウザの判定</option>
+               <option value="window.html">windowメソッドについて</option>
+               <option value="console.html">consoleオブジェクトについて</option>
+               <option value="timer.html">タイマー</option>
+          </select>
+     </form>
+     <h1>お前が使ってるブラウザは？</h1> 
+     <p id="userAgent"></p>
+     <script>
+        document.addEventListener('DOMContentLoaded',function(){
+                   document.getElementById('drop').addEventListener('change',function(){
+                       location.href = this.value;
+                   });
+               });
+
+        var nvName = navigator.appName;
+        var nvVersion = navigator.appVersion;
+
+        if (nvName.indexOf("Internet Explorer") > -1) {
+            document.write("Internet Explorerだよ。");
+        }
+        else {
+
+        if (nvName.indexOf("Opera") > -1) {
+            document.write("Operaだよ。");
+        }
+        else {
+
+        if (nvVersion.indexOf("Safari") > -1) {
+        
+        if (nvVersion.indexOf("Chrome") > -1) {
+             document.write("Google Chromeだよ。");
+        }
+        else {
+            document.write("Safariだよ。");
+            }
+        }
+        else {
+
+        if (nvUsAgent.indexOf("Firefox") > -1) {
+             document.write("FireFoxだよ。");
+        }
+        else {
+             document.write("それ以外だよ。");
+                 }
+            }
+         }
+    }
+     </script>    
+
+    <h1>Version is ・・・</h1>
+    <p id="appVersion"></p>
+
+    <script>
+        document.getElementById("appVersion").innerHTML = navigator.appVersion;
+    </script>
+
+        <h1><strong>だよ。</strong></h1>
+</body>
+</html>

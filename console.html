@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ConsoleObjectの使い方</h1>
+        <form>
+                <select name="drop" id="drop">
+                     <option value="">選択してください</option>
+                     <option value="maguro.html">マグロ</option>
+                     <option value="sarmon.html">サーモン</option>
+                     <option value="egg.html">たまご</option>
+                     <option value="git.html">git</option>
+                     <option value="favorite.html">お気に入り画像集</option>
+                     <option value="useragent.html">ブラウザの判定</option>
+                     <option value="window.html">windowメソッドについて</option>
+                     <option value="console.html">consoleオブジェクトについて</option>
+                     <option value="timer.html">タイマー</option>
+                </select>
+           </form>
+        <center><table border="2">
+                <tr><th>メソッド名</th><th>説明</th></tr>
+                <tr><td>log</td><td>コンソールに「ログメッセージ」を出力</td></tr>
+                <tr><td>info</td><td>コンソールに「情報メッセージ」を出力</td></tr>
+                <tr><td>warn</td><td>コンソールに「警告メッセージ」を出力</td></tr>
+                <tr><td>error</td><td>コンソールに「エラーメッセージ」を出力</td></tr>
+                <tr><td>dir</td><td>コンソールに「オブジェクト」を出力<br>プロパティ名と中身の値をまとめて確認できる</td></tr>
+                <tr><td>dirxml</td><td>コンソールに「DOMオブジェクト」を出力<br>DOMツリーの構造をまとめて確認できる</td></tr>
+                <tr><td>count</td><td>コンソールに「デバッグメッセージ」と「累計実行回数」を出力</td></tr>
+                <tr><td>assert</td><td>診断結果が偽の場合コンソールに「エラーメッセージ」を出力</td></tr>
+                <tr><td>trace</td><td>コンソールに「現在の関数スタックの状態」を出力</td></tr>
+                <tr><td>clear</td><td>コンソール内をクリア</td></tr>
+                <tr><td>time</td><td>タイマー計測を開始</td></tr>
+                <tr><td>timerEnd</td><td>タイマー計測を終了</td></tr>
+                <tr><td>timeStamp</td><td>メソッド実行時の時間をlogに出力</td></tr>
+                <tr><td>markTimeLine</td><td>タイムラインビュー上でメソッドが呼ばれたポイントに、引数で渡されたラベルを表示する</td></tr>
+                <tr><td>profile</td><td>プロファイルを開始</td></tr>
+                <tr><td>profileEnd</td><td>プロファイルを終了</td></tr>
+                <tr><td>group</td><td>グループ表示を開始(展開された状態)</td></tr>
+                <tr><td>groupCollapsed</td><td>グループ表示を開始(折り畳まれた状態)</td></tr>
+                <tr><td>groupEnd</td><td>グループ表示を終了</td></tr>
+                <tr><td>debug</td><td>オブジェクトの中身を文字列として展開</td></tr>
+            </table></center>
+            <script> document.addEventListener('DOMContentLoaded',function(){
+                    document.getElementById('drop').addEventListener('change',function(){
+                        location.href = this.value;
+                    });
+                });
+                </script>
+</body>
+</html>
