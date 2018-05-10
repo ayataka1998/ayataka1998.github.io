@@ -1,0 +1,42 @@
+
+.a{
+    display: inline-block;
+}
+.boxContainer {
+	overflow: hidden;
+}
+.b {
+    list-style: none;
+    overflow: hidden;
+}
+ 
+.b li {
+    float: left;
+    border-right: 1px solid #DDD;
+}
+ 
+.b li a {
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
+ 
+.b li a span {
+    display: block;
+    margin: 3px 0 0 0;
+    color: #AAA;
+    text-transform: uppercase;
+    font-size: 80%;
+    letter-spacing: 1px;
+}
+ 
+.b li a:hover {
+    background: #EEE;
+}
+ 
+.b li.active a {
+    background: #333;
+    color: #EEE;
+}
