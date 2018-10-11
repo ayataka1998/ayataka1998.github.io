@@ -8,6 +8,19 @@
 	<link rel="stylesheet" media="all" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 	<script src="js/script.js"></script>
+	<style>
+			textarea{
+				width: 500px;
+				height: 170px;
+				overflow-y: scroll
+			}
+			#a{
+			margin-top : 50px;
+			}
+			input.textfield,textarea{
+			border : 1px solid #4169e1;
+			}
+		</style>	
 </head>
 <body>
     <header id="header">
@@ -18,8 +31,8 @@
                 <div class="panel">
                     <ul>
                         <li><a href="message.html">ABOUT</a></li>
-                        <li><a href="project.html">PROJECT</a></li>
-                        <li><a href="brand.html">BRAND</a></li>
+                        <li><a href="project.html">MYROOM</a></li>
+                        <li><a href="brand.html">WORK</a></li>
                         <li><a href="company.html">CONTACT</a></li>
                     </ul>
                 </div>
@@ -34,25 +47,32 @@
 	</header>
 	<div class="innerS">
 		<ul class="col2">
-			<li>
-				<p>〒103-1234<br>見本県見本市仮区見本町1-3-5</p>
-				<p>TEL 01234-567-8901</p>
-				<p>e-Mail info@example.com</p>
-				<p>営業時間 10:00〜20:00（水曜定休）</p>
-				<p>※都合により休業する場合がございます</p>
-				<p id="sns">
-					<a href="#" target="_blank"><img src="images/iconFb.png" width="20" height="20" alt="FB"></a>
-					<a href="#" target="_blank"><img src="images/iconTw.png" width="20" height="20" alt="twitter"></a>
-					<a href="#" target="_blank"><img src="images/iconInsta.png" width="20" height="20" alt="Instagram"></a>
-					<a href="#" target="_blank"><img src="images/iconYouTube.png" width="20" height="20" alt="You Tube"></a>
-				</p>
-			</li>
-			<li>
-				<div id="map">
-					<!-- GOOGLE MAP -->
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.5937927089367!2d136.92980931491988!3d36.70829797996758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff781ec5af4ca3f%3A0x2ade3e8e4c2801b8!2z56aP5bKh6aeF!5e0!3m2!1sja!2sus!4v1478313402186" allowfullscreen></iframe>
-					<!-- // GOOGLE MAP -->
+				<h1 style = "text-align : center">お問い合わせ</h1>
+				<p style = "text-align : center;border : solid 2px blue">ご意見、要望お待ちしています。
+							<br>下記の必要事項をご記入の上、【入力内容確認へ進む】ボタンを押してください。</p>
+				<p id = "a">【必要事項】</p>
+				
+				<div class="back-image">
+				 <div class="text-area">
+				<form action = "company2.html" method = "get">
+						<p><label>お名前　　　　　　　<input type = "text" name = "name" class = "textfield"></label></p>
+						<p><label>メールアドレス　　　<input type = "text" name = "addres" class = "textfield"></label></p>
+						<p><label>住所　　　　　　　　<input type = "text" name = "zyuusyo" class = "textfield"></label></p>
+						<p><label>電話番号　　　　　　<input type = "text" name = "number" class = "textfield"></label></p>
+						<p><label>お問い合わせ内容　　<br><textarea name = "comment">お問い合わせ内容をご記入ください。</textarea></label></p>
+				<p><input type = "submit" value = "入力内容確認へ進む"></p>
+				</form>
+				
+				 </div>
 				</div>
+				
+			<li>
+				<p id="sns">
+					<a href="https://www.facebook.com/profile.php?id=100016416016038" target="_blank"><img src="images/iconFb.png" width="40" height="40" alt="FB"></a>
+					<a href="https://twitter.com/amaryllis_tkm" target="_blank"><img src="images/iconTw.png" width="40" height="40" alt="twitter"></a>
+					<a href="https://www.instagram.com/t4ku_0711/?hl=ja" target="_blank"><img src="images/iconInsta.png" width="40" height="40" alt="Instagram"></a>
+					<a href="https://www.youtube.com/channel/UCbkiQcluMjbUUnYRoH6qNmw/featured" target="_blank"><img src="images/iconYouTube.png" width="40" height="40" alt="You Tube"></a>
+				</p>
 			</li>
 		</ul>
 	</div>
